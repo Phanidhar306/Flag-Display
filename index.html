@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="wool.css" />
+  </head>
+  <body>
+    <script>
+      let countriesInfo = [
+        {
+          name: "India",
+          population: " 1,394,975,829",
+          region: "Asia",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png",
+          capital: "New delhi",
+        },
+        {
+          name: "Germany",
+          population: "81,770,900",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png",
+          capital: "Berlin",
+        },
+        {
+          name: "United states",
+          population: "323,947,000",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png",
+          capital: "Washington D.C",
+        },
+        {
+          name: "Brazil",
+          population: "206,135,893",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Brazil_flag_300.png",
+          capital: "Brasilia",
+        },
+        {
+          name: "Iceland",
+          population: "334,300",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/640px-Flag_of_Iceland.svg.png",
+          capital: "Reykjavik",
+        },
+        {
+        name: "Japan",
+        population: "125,960,000",
+        region: "Asia",
+        flag: "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
+        capital: "Tokyo",
+    },
+    {
+        name: "Australia",
+        population: "25,788,215",
+        region: "Oceania",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
+        capital: "Canberra",
+    },
+    {
+        name: "Canada",
+        population: "37,742,154",
+        region: "Americas",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
+        capital: "Ottawa",
+    },
+    {
+        name: "Nigeria",
+        population: "206,139,589",
+        region: "Africa",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
+        capital: "Abuja",
+    },
+    {
+        name: "France",
+        population: "67,081,000",
+        region: "Europe",
+        flag: "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+        capital: "Paris",
+    },
+      ];
+      const newhwad = document.createElement("div");
+      newhwad.setAttribute("class", "container");
+      document.querySelector("body").append(newhwad);
+      countriesInfo.forEach((x) => {
+        document.querySelector(
+          ".container"
+        ).innerHTML += `<div class='flexs'><img
+        src=${x.flag}
+      />
+      <div class="content">
+        <h3> ${x.name}</h3>
+        <p>
+          <span>Population:</span> ${x.population}<br />
+          <span>Region:</span>${x.region}<br />
+          <span>Capital:</span> ${x.capital}<br />
+        </p>
+      </div></div>`;
+      });
+    </script>
+  </body>
+</html>
